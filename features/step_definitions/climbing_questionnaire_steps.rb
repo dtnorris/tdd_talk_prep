@@ -4,11 +4,11 @@ end
 
 When(/^I submit a climbing questionnaire$/) do
   click_on 'Take Survey'
-  fill_in :name, with: 'David Tengdin'
-  fill_in :age, with: '25'
-  fill_in :climbing_grade, with: '5.12'
-  fill_in :favorite_climber, with: 'Chris Sharma'
-  click_on 'Submit'
+  fill_in 'Name', with: 'David Tengdin'
+  fill_in 'Age', with: '25'
+  fill_in 'Climbing grade', with: '5.12'
+  fill_in 'Favorite climber', with: 'Chris Sharma'
+  click_on 'Create Survey'
 end
 
 Then(/^I can see my answers$/) do

@@ -13,5 +13,10 @@ describe SurveysController do
       get :new
       expect(response).to render_template :new
     end
+
+    it "exposes a new survey object" do
+      get :new
+      expect(assigns(:survey)).to be_a_new Survey
+    end
   end
 end
