@@ -7,4 +7,11 @@ describe SurveysController do
       expect(response).to render_template :index
     end
   end
+
+  describe "#new" do
+    it "renders the new survey page" do
+      get :new
+      expect(response).to render_template :new
+    end
+  end
 end
