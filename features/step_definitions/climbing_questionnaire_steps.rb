@@ -16,5 +16,4 @@ Then(/^I can see my answers$/) do
   expect(page).to have_content '25'
   expect(page).to have_content '5.12'
   expect(page).to have_content 'Chris Sharma'
-  expect(page).to have_content 'Submit'
 end

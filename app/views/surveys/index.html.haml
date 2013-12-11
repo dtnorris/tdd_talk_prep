@@ -1,1 +1,15 @@
 = link_to "Take Survey", new_survey_path
+%p
+- Survey.all.each do |survey|
+  %p
+    Name:
+    = survey.name
+    %br
+    Age:
+    = survey.age
+    %br
+    Climbing Grade:
+    = survey.climbing_grade
+    %br
+    Favorite Climber:
+    = survey.favorite_climber
