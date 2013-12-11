@@ -23,19 +23,17 @@ describe SurveysController do
   describe "#create" do
     let(:survey_params) do
       {survey: {
-        name: "David",
-        age: "25",
-        climbing_grade: "5.12",
-        favorite_climber: "Chris Sharma"
+        "name" => "David",
+        "age" => "25",
+        "climbing_grade" => "5.12",
+        "favorite_climber" => "Chris Sharma"
         }
       }
     end
-    let(:initial) { 0 }
 
     it "creates a new survey" do
-      expect(Survey.all.count).to eq initial
+      expect(Survey).to receive(:create).with(survey_params[:survey])
       post :create, survey_params
-      expect(Survey.all.count).to eq initial + 1
     end
 
     it "renders the index" do
